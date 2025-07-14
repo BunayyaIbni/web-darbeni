@@ -1,4 +1,4 @@
-```yaml
+
 name: Deploy to Hosting
 on:
   push:
@@ -16,4 +16,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
         server-dir: /public_html/
-```
