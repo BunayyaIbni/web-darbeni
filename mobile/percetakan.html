@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percetakan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles untuk header dan sidebar */
+        #header {
+            transition: background-color 0.3s ease; /* Transisi halus untuk background */
+        }
+        #header.scrolled {
+            background-color: white; /* Background putih saat scroll */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+        }
+        #sidebar {
+            transform: translateX(100%); /* Sidebar tersembunyi di kanan */
+            transition: transform 0.3s ease; /* Animasi slide */
+        }
+        #sidebar.open {
+            transform: translateX(0); /* Sidebar muncul */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="../favico.ico" type="image/x-icon">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header: Sticky, transparan di top, putih saat scroll -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-3 bg-transparent">
+    <img src="../logodarbeni.png" alt="Company Logo" class="h-8" width="135px">
+    <button id="hamburger" class="text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Sidebar: Muncul dari kanan, background putih -->
+  <aside id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+  <div class="flex justify-end p-4">
+    <button id="close-sidebar" class="text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <nav class="px-4">
+    <ul class="space-y-4">
+      <li><a href="index.html" class="text-gray-800 hover:text-blue-600">Beranda</a></li>
+      <li><a href="about.html" class="text-gray-800 hover:text-blue-600">Tentang Kami</a></li>
+      <li>
+        <button id="services-toggle" class="text-gray-800 hover:text-blue-600 flex items-center w-full"> <!-- Tombol untuk toggle -->
+          Layanan
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <ul id="services-submenu" class="hidden pl-6 space-y-2 mt-2"> <!-- Submenu tersembunyi -->
+          <li><a href="sekretaris.html" class="text-gray-700 hover:text-blue-600">Sekretaris</a></li>
+          <li><a href="penata-arsip.html" class="text-gray-700 hover:text-blue-600">Penata Arsip</a></li>
+          <li><a href="satpam.html" class="text-gray-700 hover:text-blue-600">Security</a></li>
+          <li><a href="driver.html" class="text-gray-700 hover:text-blue-600">Driver</a></li>
+          <li><a href="cleaningservice.html" class="text-gray-700 hover:text-blue-600">Cleaning Service</a></li>
+          <li><a href="OB.html" class="text-gray-700 hover:text-blue-600">Office Boy</a></li>
+          <li><a href="operator.html" class="text-gray-700 hover:text-blue-600">Operator Telepon</a></li>
+          <li><a href="parkir.html" class="text-gray-700 hover:text-blue-600">Parking Service</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Percetakan</a></li>
+          <li><a href="konstruksi.html" class="text-gray-700 hover:text-blue-600">Konstruksi</a></li>
+          <li><a href="reklame.html" class="text-gray-700 hover:text-blue-600">Reklame, Pylon dan Facia Sign</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact" class="text-gray-800 hover:text-blue-600">Kontak</a></li>
+    </ul>
+  </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="pt-0"> <!-- pt-0: Tidak ada padding atas agar hero menempel di top -->
+    <!-- Hero Section: Background foto lokal dengan linear gradient overlay -->
+    <section id="home" class="bg-cover bg-center bg-no-repeat text-white text-center py-16" 
+        style="
+            background-image: linear-gradient(rgba(24, 22, 22, 0.5),
+            rgba(24, 22, 22, 0.5)), 
+            url('../img/bg-header.jpeg'); height: 50vh;">
+        <div class="pt-[100px]"> 
+            <h1 class="text-3xl font-bold">PT DARBENI BANGUNKARYA</h1> <!-- text-3xl: Font besar ~30px -->
+            <p class="mt-4 text-lg">Percetakan</p> <!-- mt-4: Margin atas 1rem -->
+        </div>    
+    </section>
+
+    <!-- About image about -->
+    <section id="cleaningservice" class="py-12 px-4">
+      <img src="../img/printing.jpg" alt="CS321">
+      <br>
+      <h4 class="text-lg font-bold text-black mb-6">Layanan Percetakan Borongan kami siap memenuhi semua kebutuhan 
+                cetak Anda, mulai dari brosur, pamflet, hingga materi promosi lainnya dalam 
+                jumlah besar. Kami memahami bahwa setiap proyek memiliki deadline dan standar 
+                kualitas yang berbeda; oleh karena itu, kami menawarkan solusi yang fleksibel 
+                dan disesuaikan untuk memenuhi kebutuhan spesifik Anda.</h4>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-4 bg-gray-300"> <!-- py-12: Padding vertikal 3rem, px-4: Padding horizontal 1rem, bg-white: Background putih -->
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Kontak Kami</h2> <!-- text-2xl: Font ~24px, text-gray-800: Abu-abu gelap, mb-6: Margin bawah 1.5rem -->
+      <ul class="space-y-4"> <!-- space-y-4: Jarak antar elemen 1rem -->
+        <!-- Email -->
+        <li class="flex items-center space-x-3"> <!-- flex: Susun horizontal, items-center: Tengah vertikal, space-x-3: Jarak 0.75rem -->
+          <i class="fa-solid fa-envelope text-blue-600 text-xl"></i> <!-- Ikon email, text-blue-600: Biru, text-xl: Ukuran ~20px -->
+          <a href="mailto:info@perusahaan.com" class="text-gray-700 hover:text-blue-600">info@darbenibangunkarya.id</a>
+        </li>
+        <!-- Telepon -->
+        <li class="flex items-center space-x-3">
+          <i class="fa-solid fa-phone text-blue-600 text-xl"></i> <!-- Ikon telepon -->
+          <a href="tel:02185918103" class="text-gray-700 hover:text-blue-600">(021) 85918103 / 85918202</a>
+        </li>
+        <!-- Alamat -->
+        <li class="flex items-center space-x-3">
+          <i class="fa-solid fa-map-marker-alt text-blue-600 text-xl"></i> <!-- Ikon alamat -->
+          <p class="text-gray-700"> <a href="https://maps.app.goo.gl/p51NdxfAavAf3Ky68">Rukan Mitra Matraman Blok C No 16-17 Jakarta Timur, 13150</a></p>
+        </li>
+        <!-- Sosial Media -->
+        <li class="flex items-center space-x-3">
+          <div class="flex space-x-4"> <!-- flex: Susun horizontal, space-x-4: Jarak 1rem antar sosial media -->
+            <a href="https://www.linkedin.com/company/pt-darbeni-bangunkarya/" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600"> <!-- space-x-2: Jarak 0.5rem antar ikon dan teks -->
+              <i class="fa-brands fa-linkedin-in text-xl"></i> <!-- Ikon LinkedIn -->
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/darbeni.bangunkarya/" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+              <i class="fa-brands fa-instagram text-xl"></i> <!-- Ikon Instagram -->
+              <span>Instagram</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    </main>
+
+    <footer class="text-white bg-black text-center">
+      <p>&copy; <span id="current-year"></span> Darbeni Bangunkarya. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+         
+         if (!isMobile) {
+            window.location.href = "../index.html"; // atau "mobile/"
+         }
+         });
+
+
+      const header = document.getElementById('header');
+      const sidebar = document.getElementById('sidebar');
+      const hamburger = document.getElementById('hamburger');
+      const closeSidebar = document.getElementById('close-sidebar');
+      const servicesToggle = document.getElementById('services-toggle');
+      const servicesSubmenu = document.getElementById('services-submenu');
+
+
+      // Header background: Transparan di top, putih saat scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+        header.classList.add('bg-white', 'shadow-md'); // Tambah bg putih dan bayangan
+        header.classList.remove('bg-transparent');
+        hamburger.classList.add('text-gray-800'); // Ikon abu-abu saat scroll
+        hamburger.classList.remove('text-white');
+      } else {
+        header.classList.add('bg-transparent'); // Transparan di top
+        header.classList.remove('bg-white', 'shadow-md');
+        hamburger.classList.add('text-white'); // Ikon putih di top
+        hamburger.classList.remove('text-gray-800');
+      }
+      });
+
+      // Toggle sidebar
+      hamburger.addEventListener('click', () => sidebar.classList.add('open'));
+      closeSidebar.addEventListener('click', () => sidebar.classList.remove('open'));
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => sidebar.classList.remove('open'));
+      });
+
+      closeSidebar.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+      });
+
+      // Toggle submenu Layanan
+      servicesToggle.addEventListener('click', () => {
+        servicesSubmenu.classList.toggle('hidden');
+      });
+
+      const currentYear = new Date().getFullYear();
+      // Menampilkan tahun di elemen dengan id "current-year"
+      document.getElementById('current-year').textContent = currentYear;
+
+    </script>
+</body>
+</html>

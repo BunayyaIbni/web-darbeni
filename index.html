@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PT. Darneni Bangunkarya</title>
+      <link rel="icon" href="favico.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!-- Link ke Bootstrap Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+      <!-- Link ke CSS Anda yang lain -->
+       <script src="https://cdn.tailwindcss.com"></script>
+      <!-- <link rel="stylesheet" href="style.css"> -->
+   </head>
+   <body>
+
+      <!-- Navbar -->
+      <nav id="navbar">
+         <a href="index.html"><img src="logodarbeni.png" alt="Company Logo" class="logo"></a>
+         <div class="nav-center">
+         <a href="index.html">Beranda</a>
+         <a href="about.html">About Us</a>
+         <div class="dropdown">
+             <a href="#services" class="dropdown-toggle">Services</a>
+             <ul class="dropdown-menu">
+                 <li><a href="service/arsip.html">Penata Arsip</a></li>
+                 <li><a href="service/sekretaris.html">Sekretaris</a></li>
+                 <li><a href="service/operator.html">Operator Telepon</a></li>
+                 <li><a href="service/cleaningservice.html">Cleaning Service</a></li>
+                 <li><a href="service/OB.html">Pelayan</a></li>
+                 <li><a href="service/satpam.html">Security</a></li>
+                 <li><a href="service/driver.html">Driver</a></li>
+                 <li><a href="service/parkir.html">Parking Service</a></li>
+                 <li><a href="service/konstruksi.html">Konstruksi</a></li>
+                 <li><a href="service/percetakan.html">Percetakan</a></li>
+                 <li><a href="service/reklame.html">Reklame, Facia, Pylon Sign</a></li>
+             </ul>
+         </div>
+         <a href="#kontak-perusahaan">Contact</a>
+         </div>
+     </nav>
+
+
+
+
+      <!-- Hero Section -->
+      <div class="hero">
+         <div class="hero-text">
+            <h1>PT. Darbeni Bangunkarya</h1>
+            <p>Menjadi Perusahaan Jasa Pilihan dan Menguntungkan</p>
+         </div>
+      </div>
+
+      <section id="desktop-news" class="py-12 px-4 hidden lg:block"> <!-- hidden lg:block: Hanya tampil di desktop (lg: ≥1024px) -->
+      <h2 class="text-3xl font-bold text-center mb-8">Berita Terkini</h2> <!-- text-3xl: Font ~30px, mb-8: Margin bawah -->
+      <div class="relative max-w-6xl mx-auto overflow-hidden"> <!-- max-w-6xl: Lebar maks ~1280px, mx-auto: Tengah -->
+         <!-- Slides -->
+         <div id="desktop-carousel" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Slide 1 -->
+            <div class="min-w-full relative">
+            <img src="img/pelatihan2025.jpg" alt="Berita 1" class="w-full h-[500px] object-cover"> <!-- h-[500px]: Tinggi lebih besar -->
+            <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-6 max-w-[60%]"> <!-- max-w-[60%]: Caption lebih lebar -->
+               <h3 class="text-xl font-semibold">Berita Terkini 1</h3>
+               <p class="text-base">Kegiatan Pelatihan Tenaga Outsourcing Periode 2025</p>
+            </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="min-w-full relative">
+            <img src="img/buka-bersama.jpg" alt="Berita 2" class="w-full h-[500px] object-cover">
+            <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-6 max-w-[60%]">
+               <h3 class="text-xl font-semibold">Berita Terkini 2</h3>
+               <p class="text-base">Buka Bersama Karyawan Head Office PT. Darbeni Bangunkarya</p>
+            </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="min-w-full relative">
+            <img src="img/refreshment.jpg" alt="Berita 3" class="w-full h-[500px] object-cover">
+            <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-6 max-w-[60%]">
+               <h3 class="text-xl font-semibold">Berita Terkini 3</h3>
+               <p class="text-base">Refreshment Tenaga Security Tahun 2024</p>
+            </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="min-w-full relative">
+            <img src="img/samahyunday.jpeg" alt="Berita 3" class="w-full h-[500px] object-cover">
+            <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-6 max-w-[60%]">
+               <h3 class="text-xl font-semibold">Berita Terkini 3</h3>
+               <p class="text-base">Bersama PT. Hyundai Manufacturing Motor Indonesia untuk projek pembuatan Manual Book Mobil Hyundai</p>
+            </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="min-w-full relative">
+            <img src="img/patimban.jpeg" alt="Berita 3" class="w-full h-[500px] object-cover">
+            <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-6 max-w-[60%]">
+               <h3 class="text-xl font-semibold">Berita Terkini 3</h3>
+               <p class="text-base">Bersama General Manager PICT untuk projek pembuatan pagar disekitaran dermaga Patimban</p>
+            </div>
+            </div>
+         </div>
+         <!-- Navigation Buttons -->
+         <button id="desktop-prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-3 rounded-full hover:bg-opacity-100 z-10"> <!-- p-3: Tombol lebih besar -->
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+         </button>
+         <button id="desktop-next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-3 rounded-full hover:bg-opacity-100 z-10">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+         </button>
+      </div>
+      </section>
+
+
+      <!-- kilas darbeni section  -->
+      <div class="company-box-bg">
+         <div class="content-wrapper">
+            <div class="company-box">
+               <h2>Sekilas PT. Darbeni Bangunkarya</h2>
+               <p>
+                  Kami adalah perusahaan jasa yang mengutamakan layanan 
+                  terhadap dunia usaha dan mitra strategis lainnya serta 
+                  memberikan nilai tambah baik bagi pemilik dan stakeholder 
+                  lainnya melalui jasa layanan profesional
+               </p>
+            </div>
+            <div class="overlay-image">
+               <img src="img/IMG_7100.JPG" alt="Company Image">
+            </div>
+         </div>
+      </div>
+
+
+
+
+      <!-- layanan terbaik darbeni -->
+      <div class="best-services">
+         <h2>Beberapa karya terbaik kami datang melalui pelayanan</h2>
+         <h2>yang kami berikan terhadap orang lain</h2>
+      </div>
+      <br><br>
+      <div class="best-card-container">
+         <!-- Card 1 -->
+         <div class="best-card">
+            <div class="ml-7"><img src="img/outsource.jpg" alt="Card Image"></div>
+            <div class="blue-line"></div>
+            <p>Outsourcing</p>
+         </div>
+         <!-- Card 2 -->
+         <div class="best-card">
+            <div class="ml-7"><img src="img/cleaningservice.png" alt="Card Image" class="flex justfy-center"> </div>
+            <div class="blue-line"></div>
+            <p>Cleaning Service</p>
+         </div>
+         <!-- Card 3 -->
+         <div class="best-card">
+            <div class="ml-7"><img src="img/rentcar.png" alt="Card Image"></div>
+            <div class="blue-line"></div>
+            <p>Car Rental</p>
+         </div>
+         <!-- Card 4 -->
+         <div class="best-card">
+            <div class="ml-7"><img src="img/parking.jpeg" alt="Card Image"></div>
+            <div class="blue-line"></div>
+            <p>Parking Service</p>
+         </div>
+         <!-- Card 5 -->
+         <div class="best-card">
+            <div class="ml-7"><img src="img/printing.jpg" alt="Card Image"></div>
+            <div class="blue-line"></div>
+            <p>Printing Service</p>
+         </div>
+         <!-- Card 6 -->
+         <div class="best-card">
+            <div class="ml-7"><img src="img/contractor.jpg" alt="Card Image"></div>
+            <div class="blue-line"></div>
+            <p>Contractor</p>
+         </div>
+      </div>
+      <br><br><br><br>
+      <!-- <section class="text-image-section">
+         <div class="text-content">
+           <h2>Tentang Perusahaan Kami</h2>
+           <p>
+             Perusahaan kami bergerak di bidang [deskripsi perusahaan]. Kami
+             berkomitmen untuk memberikan layanan terbaik kepada klien kami dengan
+             dukungan tim yang profesional dan berpengalaman.
+           </p>
+         </div>
+         <div class="image-content">
+           <img src="img/satpam.jpeg" alt="Foto Perusahaan">
+         </div>
+         </section> -->
+
+
+
+
+      <!-- Section dengan teks di sebelah kiri dan gambar di sebelah kanan -->
+      <div class="buat-bg-gradient">
+         <section class="text-left-image-right">
+            <div class="text-content">
+               <div class="teks-geser-kiri">
+                  <h2>Nilai-Nilai yang Selalu Kami Junjung Tinggi</h2>
+                  <br>
+                  <p>
+                     Profesional
+                  </p>
+                  <p>
+                  <div class="teks-kecil">
+                     Menguasai bidang usaha jasa yang mengutamakan mutu layanan yang ditunjang dengan keahlian bidang usaha jasa
+                  </div>
+                  </p>
+                  <br>
+                  <p>
+                     Integritas
+                  </p>
+                  <p>
+                  <div class="teks-kecil">
+                     Bekerja dengan selalu menjaga kejujuran, ketulusan, dan komitmen
+                  </div>
+                  </p>
+                  <br>
+                  <p>
+                     Transparan
+                  </p>
+                  <p>
+                  <div class="teks-kecil">
+                     Bekerja dengan penuh keterbukaan dan Pertanggungjawaban
+                  </div>
+                  </p>
+               </div>
+            </div>
+            <div class="image-content">
+               <img src="img/satpam.jpeg" alt="Foto Perusahaan Kanan">
+            </div>
+         </section>
+         <!-- Section dengan gambar di sebelah kiri dan teks di sebelah kanan -->
+         <section class="image-left-text-right">
+            <div class="image-content">
+               <img src="img/huraaaa.jpeg" alt="Foto Perusahaan Kiri">
+            </div>
+            <div class="text-content">
+               <div class="teks-geser-kanan">
+                  <div class="quoteskeren">
+                     <h2>
+                        Bersama, kita membangun fondasi yang kuat untuk kesuksesan yang berkelanjutan.
+                     </h2>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+
+
+      <br><br><br><br>
+
+
+
+
+      <!-- klien kami -->
+      <div class="buat-bg-gradient">
+      <section class="klien-kami">
+         <h2>Klien Kami</h2>
+         <table class="klien-table">
+            <tr>
+               <td><img src="img/bankdki.png" alt="Klien 1"></td>
+               <td><img src="img/bankdki2.png" alt="Klien 2"></td>
+               <td><img src="img/bankdki3.png" alt="Klien 3"></td>
+               <td><img src="img/mandiri.png" alt="Klien 4"></td>
+            </tr>
+            <tr>
+               <td><img src="img/mnc.png" alt="Klien 5"></td>
+               <td><img src="img/rscibabat.png" alt="Klien 6"></td>
+               <td><img src="img/rsgunjat.png" alt="Klien 7"></td>
+               <td><img src="img/rswaled.png" alt="Klien 8"></td>
+            </tr>
+            <tr>
+               <td><img src="img/pict.png" alt="Klien 9"></td>
+               <td><img src="img/Hokben.png" alt="Klien 10"></td>
+               <td><img src="img/hyundai.png" alt="Klien 11"></td>
+               <td><img src="img/lppi.png" alt="Klien 12"></td>
+            </tr>
+         </table>
+      </section>
+      </div>
+      <br><br><br><br><br>
+
+
+
+
+      <!-- kontak perusahaan -->
+      <div class="buat-bg-gradient">
+      <section id="kontak-perusahaan">
+         <div class="kontak-container">
+            <div class="logo-perusahaan">
+               <img src="logo.png" alt="Logo Perusahaan" />
+            </div>
+            <div class="kontak-info">
+               <h2>Kontak Kami</h2>
+               <p><i class="bi bi-telephone-fill"></i> <strong>Nomor Telepon:</strong> (021) 85918103 / 85918202</p>
+               <p><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> <a href="mailto:info@darbenibangunkarya.co.id">info@darbenibangunkarya.co.id</a></p>
+               <p><i class="bi bi-geo-alt-fill"></i> <strong>Alamat:</strong> <a href="https://maps.app.goo.gl/p51NdxfAavAf3Ky68"> Rukan Mitra Matraman Blok C No 16-17 Jakarta Timur, 13150</a></p>
+               <div class="sosial-media">
+                  <h3>Sosial Media</h3>
+                  <a href="https://www.linkedin.com/company/pt-darbeni-bangunkarya/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a> |
+                  <a href="https://www.instagram.com/darbeni.bangunkarya/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+
+
+
+      <!-- Footer -->
+      <footer>
+         <p>&copy; <span id="current-year"></span> PT. Darbeni Bangunkarya. All rights reserved.</p>
+         <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </footer>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+         
+         if (isMobile) {
+            window.location.href = "mobile/index.html"; // atau "mobile/"
+         }
+         });
+
+         const desktopCarousel = document.getElementById('desktop-carousel');
+         const desktopPrev = document.getElementById('desktop-prev');
+         const desktopNext = document.getElementById('desktop-next');
+         let desktopCurrentSlide = 0;
+         const desktopSlides = desktopCarousel.children;
+         const desktopTotalSlides = desktopSlides.length;
+
+         function showDesktopSlide(index) {
+            if (index >= desktopTotalSlides) desktopCurrentSlide = 0;
+            if (index < 0) desktopCurrentSlide = desktopTotalSlides - 1;
+            desktopCarousel.style.transform = `translateX(-${desktopCurrentSlide * 100}%)`;
+         }
+
+         desktopPrev.addEventListener('click', () => {
+            desktopCurrentSlide--;
+            showDesktopSlide(desktopCurrentSlide);
+         });
+
+         desktopNext.addEventListener('click', () => {
+            desktopCurrentSlide++;
+            showDesktopSlide(desktopCurrentSlide);
+         });
+
+         setInterval(() => {
+            desktopCurrentSlide++;
+            showDesktopSlide(desktopCurrentSlide);
+         }, 5000);
+      </script>
+      <script src="java.js"></script>
+      
+   </body>
+</html>
